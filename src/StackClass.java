@@ -17,7 +17,7 @@ public class StackClass {
             return head==null;
         }
 
-        //creating a push method
+        //creating a push method to delete the elements.
         public static void push(int data){
             Node newNode = new Node(data);  //idk why did not we make node like this in previous method but it is what it is
 
@@ -30,7 +30,15 @@ public class StackClass {
         }
 
 
-        //
+        //creating a pull method to delete and get the top element
+        public static int pop(){            //idk why isn't there any data in parameter
+            if(isEmpty()){
+                return -1;                   //-1 will depict the absence of any element in the list
+            }
+        int top = head.data;
+        head = head.next;
+        return top;
+        }
     }
 
 
