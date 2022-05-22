@@ -9,7 +9,7 @@ public class StackClass {
        }
     }
     //creating a stack class to store the methods of push, pop and peek in it,
-    public class Stack{
+    public static class Stack{
         public static Node head;     //head node, static so that i dont need to make one over and over
 
         //method just in case if list is empty
@@ -17,7 +17,7 @@ public class StackClass {
             return head==null;
         }
 
-        //creating a push method to delete the elements.
+        //creating a push method to add new elements.
         public static void push(int data){
             Node newNode = new Node(data);  //idk why did not we make node like this in previous method but it is what it is
 
@@ -51,6 +51,17 @@ public class StackClass {
 
 
     public static void main(String[] args) {
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        while(!stack.isEmpty()){
+            System.out.println( stack.peek());
+            stack.pop();
+
+        }
+
 
     }
 }
