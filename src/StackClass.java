@@ -39,6 +39,14 @@ public class StackClass {
         head = head.next;
         return top;
         }
+
+        //working on peek method to have a look now
+        public static int peek(){
+            if(isEmpty()){
+                return -1;
+            }
+           return head.data;                //if it has elements then return the data of the head
+        }
     }
 
 
